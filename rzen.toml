@@ -1,0 +1,19 @@
+[project]
+path = "."
+name = "rzen"
+build_mode = "release"
+
+[deploy]
+target = "vps"
+vps_host = "example.com"
+vps_user = "deploy"
+vps_key_path = "~/.ssh/id_rsa"
+deploy_path = "/opt/rzen-app"
+service_name = "rzen.service"
+ssh_port = 22
+
+[monitor]
+health_endpoint = "http://your-vps.example.com:8080/health"
+log_path = "/var/log/my-rust-app.log"
+interval_secs = 10
+health_timeout_secs = 5

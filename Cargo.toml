@@ -1,0 +1,35 @@
+[package]
+name = "rzen"
+version = "0.1.0"
+edition = "2024"
+authors = ["кuro <x40151@proton.me>"]
+description = "A TUI-based CLI tool for building, deploying, and monitoring Rust projects"
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/kurosci/rzen"
+repository = "https://github.com/kurosci/rzen"
+keywords = ["cli", "tui", "rust", "deployment", "monitoring"]
+categories = ["command-line-utilities", "development-tools"]
+exclude = [".github/**", "target/**", "rzen.toml"]
+
+[dependencies]
+ratatui = "0.26"
+crossterm = "0.27"
+clap = { version = "4.4", features = ["derive"] }
+toml = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+ssh2 = "0.9"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.0", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow = "1.0"
+thiserror = "1.0"
+indicatif = "0.17"
+tokio-util = "0.7"
+dirs = "5.0"
+chrono = { version = "0.4", features = ["serde"] }
+shellexpand = "3.1"
+
+[dev-dependencies]
+tempfile = "3.8"
